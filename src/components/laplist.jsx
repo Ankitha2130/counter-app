@@ -15,12 +15,13 @@ const LapList = ({ laps, formatTime, lapsEndRef }) => {
             <span className="font-mono text-gray-600 dark:text-gray-400">Lap {index + 1}</span>
             <span className="font-mono text-gray-800 dark:text-gray-200">{formatTime(lap)}</span>
           </div>
-        ))}
-        <FontAwesomeIcon
+      <FontAwesomeIcon
               icon={faTrash}
               className="text-red-500 cursor-pointer"
               onClick={() => handleLapDelete(index)} // Call the delete handler on click
             />
+        ))}
+        
         <div ref={lapsEndRef} />
       </ScrollArea>
     </div>
