@@ -16,7 +16,7 @@ const LapList = ({ laps, formatTime, lapsEndRef }) => {
             <FontAwesomeIcon
               icon={faTrash}
               className="text-red-500 cursor-pointer"
-              onClick={() => onDeleteLap(index)} // Call the delete handler on click
+              onClick={() => handleLapDelete(index)} // Call the delete handler on click
             />
             <span className="font-mono text-gray-800 dark:text-gray-200">{formatTime(lap)}</span>
           </div>
