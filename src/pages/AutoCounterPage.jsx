@@ -70,6 +70,11 @@ const AutoCounterPage = () => {
     setLaps((prevLaps) => [...prevLaps, count]);
   };
 
+  const handleDeleteLap = (index) => {
+    // Filter out the lap at the given index
+    setLaps(laps.filter((_, lapIndex) => lapIndex !== index))
+  };
+
   return (
     <div
       className={`h-svh bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 transition-colors duration-305`}
@@ -89,6 +94,7 @@ const AutoCounterPage = () => {
             laps={laps}
             formatTime={formatTime}
             lapsEndRef={lapsEndRef}
+            onDeleteLap={handleDeleteLap}
           />
         </div>
       </div>
