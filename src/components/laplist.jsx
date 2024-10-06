@@ -13,14 +13,14 @@ const LapList = ({ laps, formatTime, lapsEndRef }) => {
         {laps.map((lap, index) => (
           <div key={index} className="flex justify-between py-2 border-b border-gray-100 dark:border-gray-700 last:border-b-0">
             <span className="font-mono text-gray-600 dark:text-gray-400">Lap {index + 1}</span>
-            <FontAwesomeIcon
+            <span className="font-mono text-gray-800 dark:text-gray-200">{formatTime(lap)}</span>
+          </div>
+        ))}
+        <FontAwesomeIcon
               icon={faTrash}
               className="text-red-500 cursor-pointer"
               onClick={() => handleLapDelete(index)} // Call the delete handler on click
             />
-            <span className="font-mono text-gray-800 dark:text-gray-200">{formatTime(lap)}</span>
-          </div>
-        ))}
         <div ref={lapsEndRef} />
       </ScrollArea>
     </div>
