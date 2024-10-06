@@ -5,7 +5,7 @@ import { ScrollArea } from './ui/scroll-area'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
 
-const LapList = ({ laps, formatTime, lapsEndRef, onDeleteLap }) => {
+const LapList = ({ laps, formatTime, lapsEndRef }) => {
   return (
     <div className="border-t border-gray-200 dark:border-gray-700 pt-4">
       <h3 className="text-lg font-semibold mb-2 text-blue-600 dark:text-blue-400">Laps</h3>
