@@ -94,7 +94,7 @@ const AutoCounterPage = () => {
             laps={laps}
             formatTime={formatTime}
             lapsEndRef={lapsEndRef}
-            onDeleteLap={handleDeleteLap}
+            
           />
         </div>
       </div>
